@@ -1,1 +1,52 @@
+/* Default styles for all views (mobile-first) */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.section {
+    background-color: #EFEFEF;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 20px;
+}
+
+.section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+}
+
+/* Media queries for different views */
+
+/* Desktop View (992px and above) */
+@media (min-width: 992px) {
+    .section {
+        width: 30%; /* Each section takes up 30% of the screen width */
+        float: left;
+    }
+}
+
+/* Tablet View (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 50%; /* Each section takes up 50% of the screen width */
+        float: left;
+    }
+    .section:nth-child(3) {
+        width: 100%; /* Third section takes up the entire row */
+        clear: both; /* Clear floats to start a new row for the third section */
+    }
+}
+
+/* Mobile View (767px and below) */
+@media (max-width: 767px) {
+    .section {
+        width: 100%; /* Each section takes up the entire row */
+        clear: both; /* Clear floats to stack sections vertically */
+    }
+}
 
