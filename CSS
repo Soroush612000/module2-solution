@@ -1,1 +1,37 @@
+/* Default Styles (Common to All Views) */
+.section {
+  background-color: #F0F0F0;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 20px;
+}
+
+/* Desktop View (992px and above) */
+@media (min-width: 992px) {
+  .section {
+    /* For desktop view, make each section take 30% of the screen width */
+    width: 30%;
+    float: left; /* Float sections to the left to create a side-by-side layout */
+  }
+}
+
+/* Tablet View (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section {
+    /* For tablet view, make each section take 45% of the screen width */
+    width: 45%;
+    margin: 10px 2.5%; /* Add some margin between sections and adjust the margin on the sides */
+    float: none; /* Remove the float to stack sections vertically */
+  }
+}
+
+/* Mobile View (767px and below) */
+@media (max-width: 767px) {
+  .section {
+    /* For mobile view, make each section take 90% of the screen width */
+    width: 90%;
+    margin: 10px 5%; /* Add margin and center sections on smaller screens */
+    float: none; /* Remove the float to stack sections vertically */
+  }
+}
 
